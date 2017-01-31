@@ -1,0 +1,249 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+
+<databaseChangeLog 
+		xmlns="http://www.liquibase.org/xml/ns/dbchangelog" 
+		xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="Thamira (generated)" id="1484042189706-1">
+        <createTable tableName="Ticker">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="first_quarter_end_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="description" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="min_cars" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="type" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="weight" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gap" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="max_cars" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-2">
+        <createTable tableName="factory">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="address" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comment" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="directory" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="latitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="longitude" type="DOUBLE">
+                <constraints nullable="false"/>
+            </column>
+            <column name="zip" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="zone_offset" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="state_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="factory_id" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ticker_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-3">
+        <createTable tableName="factory_checklist">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="download_directory" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="file_name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="month" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="records" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="INT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-4">
+        <createTable tableName="factory_job">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="directory" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="match_id" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="stalite_image_provider" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="checklist" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-5">
+        <createTable tableName="factory_lot">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comment" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="spaces" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="factory_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-6">
+        <createTable tableName="factory_lot_count">
+            <column name="id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cars" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="comment" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="containers" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="production_cars" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="status" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="trucks" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="completed_user_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="qc_cars" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="qc_containers" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="qc_production_cars" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="qc_trucks" type="INT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="qcd_user_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="factory_lot_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+            <column name="factory_job_id" type="BIGINT">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-7">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="Ticker"/>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-8">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="factory"/>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-9">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="factory_checklist"/>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-10">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="factory_job"/>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-11">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="factory_lot"/>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-12">
+        <addPrimaryKey columnNames="id" constraintName="PRIMARY" tableName="factory_lot_count"/>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-13">
+        <createIndex indexName="checklist" tableName="factory_job">
+            <column name="checklist"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-14">
+        <createIndex indexName="factory_id" tableName="factory_lot">
+            <column name="factory_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-15">
+        <createIndex indexName="factory_job_id" tableName="factory_lot_count">
+            <column name="factory_job_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-16">
+        <createIndex indexName="factory_lot_id" tableName="factory_lot_count">
+            <column name="factory_lot_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-17">
+        <createIndex indexName="ticker_id" tableName="factory">
+            <column name="ticker_id"/>
+        </createIndex>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-18">
+        <addForeignKeyConstraint baseColumnNames="ticker_id" baseTableName="factory" constraintName="factory_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="Ticker"/>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-19">
+        <addForeignKeyConstraint baseColumnNames="checklist" baseTableName="factory_job" constraintName="factory_job_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="factory_checklist"/>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-20">
+        <addForeignKeyConstraint baseColumnNames="factory_lot_id" baseTableName="factory_lot_count" constraintName="factory_lot_count_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="factory_lot"/>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-21">
+        <addForeignKeyConstraint baseColumnNames="factory_job_id" baseTableName="factory_lot_count" constraintName="factory_lot_count_ibfk_2" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="factory_job"/>
+    </changeSet>
+    <changeSet author="Thamira (generated)" id="1484042189706-22">
+        <addForeignKeyConstraint baseColumnNames="factory_id" baseTableName="factory_lot" constraintName="factory_lot_ibfk_1" deferrable="false" initiallyDeferred="false" onDelete="CASCADE" onUpdate="CASCADE" referencedColumnNames="id" referencedTableName="factory"/>
+    </changeSet>
+</databaseChangeLog>
